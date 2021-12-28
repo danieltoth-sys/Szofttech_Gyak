@@ -9,9 +9,7 @@ namespace Szofttech_GyakDemo01
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        #region Program&MainConfiguration
         [STAThread]
         static void Main()
         {
@@ -27,5 +25,6 @@ namespace Szofttech_GyakDemo01
                 Application.ExitThread();
             }
         }
+        #endregion
     }
 }

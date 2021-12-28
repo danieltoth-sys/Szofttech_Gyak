@@ -13,11 +13,13 @@ namespace Szofttech_GyakDemo01
 {
     public partial class NewOrder : DevExpress.XtraEditors.XtraForm
     {
+        #region NewOrderConfiguration
         public NewOrder()
         {
             InitializeComponent();
         }
 
+        #region SelectOrderType
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.No;
@@ -29,10 +31,14 @@ namespace Szofttech_GyakDemo01
             this.DialogResult = DialogResult.Yes;
             this.Close();
         }
+        #endregion
 
+        #region BackButtonClickEvent
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        #endregion
+        #endregion
     }
 }

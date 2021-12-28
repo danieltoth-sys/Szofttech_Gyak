@@ -11,6 +11,7 @@ namespace Szofttech_GyakDemo01
 {
     public partial class LoadingScreen : SplashScreen
     {
+        #region LoadingScreenConfiguration
         public LoadingScreen()
         {
             InitializeComponent();
@@ -28,5 +29,6 @@ namespace Szofttech_GyakDemo01
         public enum SplashScreenCommand
         {
         }
+        #endregion
     }
 }

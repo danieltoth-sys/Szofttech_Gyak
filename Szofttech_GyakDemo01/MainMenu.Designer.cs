@@ -30,7 +30,6 @@ namespace Szofttech_GyakDemo01
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Szofttech_GyakDemo01.LoadingScreen), true, true, true);
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -63,10 +62,6 @@ namespace Szofttech_GyakDemo01
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 500;
             // 
             // fluentDesignFormContainer1
             // 
@@ -197,7 +192,6 @@ namespace Szofttech_GyakDemo01
             // 
             // fluentFormDefaultManager1
             // 
-            this.fluentFormDefaultManager1.DockingEnabled = false;
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barStaticItem1});
@@ -374,7 +368,7 @@ namespace Szofttech_GyakDemo01
             this.Name = "MainMenu";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Szofttech Gyak Projekt";
+            this.Text = "CodeRiders Étteremkezelő";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainMenu_FormClosing);
             this.SizeChanged += new System.EventHandler(this.MainMenu_SizeChanged);
             this.fluentDesignFormContainer1.ResumeLayout(false);

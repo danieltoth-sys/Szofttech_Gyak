@@ -13,6 +13,7 @@ namespace Szofttech_GyakDemo01
 {   
     public partial class MainMenu : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
+        #region MainMenuConfiguration
         public MainMenu()
         {
             InitializeComponent();            
@@ -23,8 +24,7 @@ namespace Szofttech_GyakDemo01
             else
             {
                 this.WindowState = FormWindowState.Normal;
-            }
-            
+            }            
             //Temporary! Delete when database is added!
             checkedListBoxControl1.Items.Add("Hamburger");
             checkedListBoxControl1.Items.Add("Pizza");
@@ -71,7 +71,9 @@ namespace Szofttech_GyakDemo01
         {
             this.Close();
         }
+        #endregion
 
+        #region OrderType
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
             NewOrder order = new NewOrder();
@@ -88,10 +90,35 @@ namespace Szofttech_GyakDemo01
                 //fluentDesignFormContainer2.Visible = true;
             }
         }
+        #endregion
+        
+        #region PriceCalculate
+        private void checkedListBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Termék hozzáadása egy listához, és ezzel együtt a termék szerinti árszámítás a végösszeghez!
+        }
+
+        private void checkedListBoxControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Menü hozzáadása egy listához, és ezzel együtt a termék szerinti árszámítás a végösszeghez!
+        }
+
+        private void checkedListBoxControl3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Előző rendelés hozzáadása egy listához, és ezzel együtt a termék szerinti árszámítás a végösszeghez!
+        }
+
+        public void ChangePrice(int prodprice)
+        {
+            string[] price = labelControl2.Text.Split(' ');
+            int finalprice = Convert.ToInt32(price[1]) + prodprice;
+            labelControl2.Text = "Végösszeg: " + finalprice + " Ft";
+        }
+        #endregion
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Szeretné leadni a rendelést?","Rendelés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Szeretné leadni a rendelést?", "Rendelés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 try
@@ -103,10 +130,10 @@ namespace Szofttech_GyakDemo01
                     MessageBox.Show("Hiba történt leadás közben! Ellenőrizze az adatokat!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                MessageBox.Show("A rendelést sikeresen leadta!", "Rendelés", MessageBoxButtons.OK, MessageBoxIcon.Information);                
+                MessageBox.Show("A rendelést sikeresen leadta!", "Rendelés", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
- 
+
 
         private void listBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,33 +153,12 @@ namespace Szofttech_GyakDemo01
                 case 2:
                     checkedListBoxControl3.Items.Add("Sültkrumpli");
                     checkedListBoxControl3.Items.Add("Hamburgermenü");
-                    checkedListBoxControl3.Items.Add("Gyros menü");                    
+                    checkedListBoxControl3.Items.Add("Gyros menü");
                     break;
                 default:
                     break;
             }
             //Temporary stuff ends here! Do not delete any stuff below this comment!
-        }
-        private void checkedListBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Termék hozzáadása egy listához, és ezzel együtt a termék szerinti árszámítás a végösszeghez!
-        }
-
-        private void checkedListBoxControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Indexszámolás
-        }
-
-        private void checkedListBoxControl3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Indexszámolás
-        }
-       
-        public void ChangePrice(int prodprice)
-        {
-            string[] price = labelControl2.Text.Split(' ');
-            int finalprice = Convert.ToInt32(price[1]) + prodprice;
-            labelControl2.Text = "Végösszeg: " + finalprice + " Ft";
         }
     }
 }

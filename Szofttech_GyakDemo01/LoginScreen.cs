@@ -12,19 +12,22 @@ namespace Szofttech_GyakDemo01
 {
     public partial class LoginScreen : DevExpress.XtraEditors.XtraForm
     {
-        //Temporary stuff
+        //Temporary! Delete when database is added!
         public string username;
         public string password;
-        //
-
+        //Temporary stuff ends here! Do not delete any stuff below this comment!
+        #region LoginScreenConfiguration
         public LoginScreen()
         {
-            username = "tothdm";
+            //Temporary! Delete when database is added! //Temporary account!
+            username = "user";
             password = "123";
+            //
             InitializeComponent();
             textEdit2.Properties.PasswordChar = '*';
         }
-
+        #endregion
+        #region CheckDatasForLogin
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             try
@@ -44,5 +47,6 @@ namespace Szofttech_GyakDemo01
             this.Hide();
             main.ShowDialog(this);            
         }
+        #endregion
     }
 }
