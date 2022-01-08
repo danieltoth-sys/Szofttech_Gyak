@@ -22,7 +22,7 @@ namespace Szofttech_GyakDemo01
             catch (Exception)
             {
                 MessageBox.Show("Ismeretlen hiba történt a program működése során! Az alkalmazás leáll!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.ExitThread();
+                Application.ExitThread();                
             }
         }
         #endregion
