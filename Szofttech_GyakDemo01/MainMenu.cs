@@ -167,6 +167,7 @@ namespace Szofttech_GyakDemo01
             product.Owner = this;
             this.Hide();
             product.ShowDialog();
+            //
         }
     }
 }
