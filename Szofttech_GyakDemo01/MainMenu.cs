@@ -28,20 +28,26 @@ namespace Szofttech_GyakDemo01
                 this.WindowState = FormWindowState.Normal;
             }
             MessageBox.Show(mainDataFromXML.Adatok[0].Menuk.Elnevezes + " " + mainDataFromXML.Adatok[1].Menuk.Elnevezes);
-            //Temporary! Delete when database is added!
-            checkedListBoxControl1.Items.Add("Hamburger");
-            checkedListBoxControl1.Items.Add("Pizza");
-            checkedListBoxControl1.Items.Add("Spagetti");
-            checkedListBoxControl1.Items.Add("Sültkrumpli");
 
-            checkedListBoxControl2.Items.Add("Hamburgermenü");
-            checkedListBoxControl2.Items.Add("Pizza menü");
-            checkedListBoxControl2.Items.Add("Gyros Menü");
-
-            listBoxControl1.Items.Add("Tóth Dániel Márk");
-            listBoxControl1.Items.Add("Kerekes Krisztofer");
-            listBoxControl1.Items.Add("Teszt Lajos");
-            //Temporary stuff ends here! Do not delete any stuff below this comment!
+            int counter = 0;
+            List<string> Menus = new List<string>();
+            for (int i = 0; i < mainDataFromXML.Adatok.Count; i++)
+            {
+                Menus.Add(mainDataFromXML.Adatok[i].Menuk.Elnevezes);
+            }
+            List<string> noDuplicatesMenus = Menus.Distinct().ToList();
+            while (counter < noDuplicatesMenus.Count)
+            {
+                checkedListBoxControl2.Items.Add(noDuplicatesMenus[counter]);
+                counter++;
+            }
+            counter = 0;
+            while (counter < mainDataFromXML.Adatok.Count)
+            {
+                checkedListBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Termekek.Elnevezes);
+                listBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Felhasznalok.Nev);
+                counter++;
+            }
         }
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
