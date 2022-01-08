@@ -16,7 +16,9 @@ namespace Szofttech_GyakDemo01
         #region MainMenuConfiguration
         public MainMenu()
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+            var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
             if (Settings.Default.isMaximized == true)
             {
                 this.WindowState = FormWindowState.Maximized;
@@ -24,7 +26,8 @@ namespace Szofttech_GyakDemo01
             else
             {
                 this.WindowState = FormWindowState.Normal;
-            }            
+            }
+            MessageBox.Show(mainDataFromXML.Adatok[0].Menuk.Elnevezes + " " + mainDataFromXML.Adatok[1].Menuk.Elnevezes);
             //Temporary! Delete when database is added!
             checkedListBoxControl1.Items.Add("Hamburger");
             checkedListBoxControl1.Items.Add("Pizza");

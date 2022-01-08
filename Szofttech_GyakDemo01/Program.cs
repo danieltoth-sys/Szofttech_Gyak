@@ -15,15 +15,15 @@ namespace Szofttech_GyakDemo01
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            try
-            {
+            //try
+            //{
                 Application.Run(new LoginScreen());
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ismeretlen hiba történt a program működése során! Az alkalmazás leáll!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.ExitThread();
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Ismeretlen hiba történt a program működése során! Az alkalmazás leáll!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    Application.ExitThread();
+            //}
         }
         #endregion
     }
