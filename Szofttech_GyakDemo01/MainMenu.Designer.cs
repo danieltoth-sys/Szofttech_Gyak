@@ -92,7 +92,7 @@ namespace Szofttech_GyakDemo01
             this.checkedListBoxControl1.Location = new System.Drawing.Point(750, 46);
             this.checkedListBoxControl1.MultiColumn = true;
             this.checkedListBoxControl1.Name = "checkedListBoxControl1";
-            this.checkedListBoxControl1.Size = new System.Drawing.Size(335, 473);
+            this.checkedListBoxControl1.Size = new System.Drawing.Size(352, 473);
             this.checkedListBoxControl1.TabIndex = 12;
             this.checkedListBoxControl1.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxControl1_SelectedIndexChanged);
             // 
@@ -152,7 +152,7 @@ namespace Szofttech_GyakDemo01
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(653, 692);
+            this.labelControl2.Location = new System.Drawing.Point(653, 906);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(188, 29);
             this.labelControl2.TabIndex = 5;
@@ -183,7 +183,7 @@ namespace Szofttech_GyakDemo01
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(935, 656);
+            this.simpleButton1.Location = new System.Drawing.Point(952, 870);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(157, 66);
             this.simpleButton1.TabIndex = 3;
@@ -246,7 +246,6 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
             this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Height = 50;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Készlet";
@@ -280,6 +279,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement6.Text = "Termék";
+            this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
             // accordionControlElement7
             // 

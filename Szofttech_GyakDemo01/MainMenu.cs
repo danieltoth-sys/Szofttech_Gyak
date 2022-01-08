@@ -160,5 +160,13 @@ namespace Szofttech_GyakDemo01
             }
             //Temporary stuff ends here! Do not delete any stuff below this comment!
         }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            product.Owner = this;
+            this.Hide();
+            product.ShowDialog();
+        }
     }
 }
