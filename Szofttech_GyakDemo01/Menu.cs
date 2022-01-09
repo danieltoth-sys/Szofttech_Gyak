@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace Szofttech_GyakDemo01
 {
-    public partial class Product : DevExpress.XtraEditors.XtraForm
+    public partial class Menu : DevExpress.XtraEditors.XtraForm
     {
-        public Product()
+        public Menu()
         {
             InitializeComponent();
             var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
             int counter = 0;
             while (counter < mainDataFromXML.Adatok.Count)
             {
-                listBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Termekek.Elnevezes +"\t"+ mainDataFromXML.Adatok[counter].Termekek.Ar);
+                listBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Menuk.Elnevezes + "\t" + mainDataFromXML.Adatok[counter].Menuk.Ar);
                 counter++;
             }
-            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -44,11 +43,11 @@ namespace Szofttech_GyakDemo01
                 if (!x)
                 {
                     listBoxControl1.Items.Add(textEdit1.Text + "\t" + textEdit2.Text + " Ft");
-                    MessageBox.Show("Sikeres termék hozzáadás!", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sikeres menü hozzáadás!", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen termék hozzáadás!\nMár szerepel a nyílvántartásban.", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sikertelen menü hozzáadás!\nMár szerepel a nyílvántartásban.", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 textEdit1.Text = "";

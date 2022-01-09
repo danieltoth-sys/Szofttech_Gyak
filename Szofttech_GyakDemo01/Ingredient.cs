@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace Szofttech_GyakDemo01
 {
-    public partial class Product : DevExpress.XtraEditors.XtraForm
+    public partial class Ingredient : DevExpress.XtraEditors.XtraForm
     {
-        public Product()
+        public Ingredient()
         {
             InitializeComponent();
             var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
             int counter = 0;
             while (counter < mainDataFromXML.Adatok.Count)
             {
-                listBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Termekek.Elnevezes +"\t"+ mainDataFromXML.Adatok[counter].Termekek.Ar);
+                listBoxControl1.Items.Add(mainDataFromXML.Adatok[counter].Alapanyagok.Elnevezes);
                 counter++;
             }
-            
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -36,27 +35,25 @@ namespace Szofttech_GyakDemo01
                 bool x = false;
                 foreach (var item in listBoxControl1.Items)
                 {
-                    if (item.ToString().Split('\t')[0] == textEdit1.Text)
+                    if (item.ToString() == textEdit1.Text)
                     {
                         x = true;
                     }
                 }
                 if (!x)
                 {
-                    listBoxControl1.Items.Add(textEdit1.Text + "\t" + textEdit2.Text + " Ft");
-                    MessageBox.Show("Sikeres termék hozzáadás!", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listBoxControl1.Items.Add(textEdit1.Text);
+                    MessageBox.Show("Sikeres alapanyag hozzáadás!", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Sikertelen termék hozzáadás!\nMár szerepel a nyílvántartásban.", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sikertelen alapanyag hozzáadás!\nMár szerepel a nyílvántartásban.", "Hozzáadás", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 textEdit1.Text = "";
-                textEdit2.Text = "";
             }
         }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void simpleButton2_Click_1(object sender, EventArgs e)
         {
             Owner.Show();
             this.Hide();

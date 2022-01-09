@@ -49,7 +49,7 @@ namespace Szofttech_GyakDemo01
 		[XmlElement(ElementName = "telefeon")]
 		public string Telefeon { get; set; }
 	}
-	
+
 	[XmlRoot(ElementName = "rendelesek")]
 	public class Rendelesek
 	{

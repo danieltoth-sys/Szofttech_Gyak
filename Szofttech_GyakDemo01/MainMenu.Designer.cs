@@ -82,6 +82,7 @@ namespace Szofttech_GyakDemo01
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1104, 733);
             this.fluentDesignFormContainer1.TabIndex = 0;
             this.fluentDesignFormContainer1.Visible = false;
+            this.fluentDesignFormContainer1.Click += new System.EventHandler(this.fluentDesignFormContainer1_Click);
             // 
             // checkedListBoxControl1
             // 
@@ -89,13 +90,11 @@ namespace Szofttech_GyakDemo01
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBoxControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkedListBoxControl1.Appearance.Options.UseFont = true;
-            this.checkedListBoxControl1.CheckOnClick = true;
             this.checkedListBoxControl1.Location = new System.Drawing.Point(750, 46);
             this.checkedListBoxControl1.MultiColumn = true;
             this.checkedListBoxControl1.Name = "checkedListBoxControl1";
             this.checkedListBoxControl1.Size = new System.Drawing.Size(352, 473);
             this.checkedListBoxControl1.TabIndex = 12;
-            this.checkedListBoxControl1.ItemCheck += new DevExpress.XtraEditors.Controls.ItemCheckEventHandler(this.checkedListBoxControl1_ItemCheck);
             this.checkedListBoxControl1.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxControl1_SelectedIndexChanged);
             // 
             // labelControl5
@@ -142,7 +141,6 @@ namespace Szofttech_GyakDemo01
             // 
             this.checkedListBoxControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkedListBoxControl2.Appearance.Options.UseFont = true;
-            this.checkedListBoxControl2.CheckOnClick = true;
             this.checkedListBoxControl2.Location = new System.Drawing.Point(381, 46);
             this.checkedListBoxControl2.Name = "checkedListBoxControl2";
             this.checkedListBoxControl2.Size = new System.Drawing.Size(335, 473);
@@ -155,11 +153,11 @@ namespace Szofttech_GyakDemo01
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(728, 669);
+            this.labelControl2.Location = new System.Drawing.Point(653, 906);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(15, 29);
+            this.labelControl2.Size = new System.Drawing.Size(188, 29);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "0";
+            this.labelControl2.Text = "Végösszeg: 0 Ft";
             // 
             // listBoxControl1
             // 
@@ -186,7 +184,7 @@ namespace Szofttech_GyakDemo01
             this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(935, 655);
+            this.simpleButton1.Location = new System.Drawing.Point(952, 870);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(157, 66);
             this.simpleButton1.TabIndex = 3;
@@ -296,6 +294,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement7.Text = "Menü";
+            this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
             // accordionControlElement8
             // 
@@ -309,6 +308,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement8.Text = "Alapanyag";
+            this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
             // 
             // accordionControlElement1
             // 
