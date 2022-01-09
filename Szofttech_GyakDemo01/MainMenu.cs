@@ -219,5 +219,22 @@ namespace Szofttech_GyakDemo01
             }
             labelControl2.Text = (endosszeg).ToString();
         }
+
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
+            int endosszeg = Convert.ToInt32(labelControl2.Text);
+
+            if(radioGroup1.SelectedIndex == 0)
+            {
+                endosszeg = (int) Math.Round(0.7 * endosszeg);
+                labelControl2.Text = endosszeg.ToString();
+            }
+            else if(radioGroup1.SelectedIndex == 1)
+            {
+                endosszeg = (int)Math.Round(endosszeg / 0.7);
+                labelControl2.Text = endosszeg.ToString();
+            }
+        }
     }
 }
