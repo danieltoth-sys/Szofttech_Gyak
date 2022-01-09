@@ -103,8 +103,7 @@ namespace Szofttech_GyakDemo01
         
         #region PriceCalculate
         private void checkedListBoxControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Termék hozzáadása egy listához, és ezzel együtt a termék szerinti árszámítás a végösszeghez!
+        {            
         }
 
         private void checkedListBoxControl2_SelectedIndexChanged(object sender, EventArgs e)
@@ -132,7 +131,7 @@ namespace Szofttech_GyakDemo01
             {
                 try
                 {
-                    //Rendelésleadás metódus/class meghívás
+                    //Rendelésleadás metódus/class meghívás                    
                 }
                 catch (Exception)
                 {
@@ -165,7 +164,7 @@ namespace Szofttech_GyakDemo01
                     checkedListBoxControl3.Items.Add("Gyros menü");
                     break;
                 default:
-                    break;
+                    break;                    
             }
             //Temporary stuff ends here! Do not delete any stuff below this comment!
         }
@@ -177,6 +176,21 @@ namespace Szofttech_GyakDemo01
             this.Hide();
             product.ShowDialog();
             //
+        }
+
+        private void checkedListBoxControl1_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        {
+        var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
+        int endosszeg = Convert.ToInt32(labelControl2.Text);
+            if (checkedListBoxControl1.Items[checkedListBoxControl1.SelectedIndex].CheckState == CheckState.Checked)
+            {
+                endosszeg += Convert.ToInt32(mainDataFromXML.Adatok[checkedListBoxControl1.SelectedIndex].Termekek.Ar.Split(' ')[0]);
+            }
+            else
+            {
+                endosszeg -= Convert.ToInt32(mainDataFromXML.Adatok[checkedListBoxControl1.SelectedIndex].Termekek.Ar.Split(' ')[0]);
+            }        
+        labelControl2.Text = (endosszeg).ToString();
         }
     }
 }
