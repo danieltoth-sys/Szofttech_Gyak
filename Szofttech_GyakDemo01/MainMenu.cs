@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Szofttech_GyakDemo01.Properties;
+using DevExpress.XtraEditors.Controls;
 
 namespace Szofttech_GyakDemo01
 {   
@@ -38,7 +39,7 @@ namespace Szofttech_GyakDemo01
             List<string> noDuplicatesMenus = Menus.Distinct().ToList();
             while (counter < noDuplicatesMenus.Count)
             {
-                checkedListBoxControl2.Items.Add(noDuplicatesMenus[counter]);
+                radioGroup1.Properties.Items.Add(new RadioGroupItem(noDuplicatesMenus[counter], noDuplicatesMenus[counter].ToString()));
                 counter++;
             }
             counter = 0;

@@ -36,7 +36,6 @@ namespace Szofttech_GyakDemo01
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.checkedListBoxControl3 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.checkedListBoxControl2 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -53,24 +52,25 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
             // 
+            this.fluentDesignFormContainer1.Controls.Add(this.radioGroup1);
             this.fluentDesignFormContainer1.Controls.Add(this.checkedListBoxControl1);
             this.fluentDesignFormContainer1.Controls.Add(this.labelControl5);
             this.fluentDesignFormContainer1.Controls.Add(this.labelControl1);
             this.fluentDesignFormContainer1.Controls.Add(this.checkedListBoxControl3);
             this.fluentDesignFormContainer1.Controls.Add(this.labelControl4);
-            this.fluentDesignFormContainer1.Controls.Add(this.checkedListBoxControl2);
             this.fluentDesignFormContainer1.Controls.Add(this.labelControl2);
             this.fluentDesignFormContainer1.Controls.Add(this.listBoxControl1);
             this.fluentDesignFormContainer1.Controls.Add(this.labelControl3);
@@ -138,23 +138,13 @@ namespace Szofttech_GyakDemo01
             this.labelControl4.TabIndex = 7;
             this.labelControl4.Text = "Menük";
             // 
-            // checkedListBoxControl2
-            // 
-            this.checkedListBoxControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkedListBoxControl2.Appearance.Options.UseFont = true;
-            this.checkedListBoxControl2.Location = new System.Drawing.Point(381, 46);
-            this.checkedListBoxControl2.Name = "checkedListBoxControl2";
-            this.checkedListBoxControl2.Size = new System.Drawing.Size(335, 473);
-            this.checkedListBoxControl2.TabIndex = 6;
-            this.checkedListBoxControl2.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxControl2_SelectedIndexChanged);
-            // 
             // labelControl2
             // 
             this.labelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(899, 669);
+            this.labelControl2.Location = new System.Drawing.Point(853, 669);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(15, 29);
             this.labelControl2.TabIndex = 5;
@@ -358,6 +348,14 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement3.Text = "Kilépés";
             // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(381, 46);
+            this.radioGroup1.MenuManager = this.fluentFormDefaultManager1;
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Size = new System.Drawing.Size(336, 473);
+            this.radioGroup1.TabIndex = 13;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,11 +377,11 @@ namespace Szofttech_GyakDemo01
             this.fluentDesignFormContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,12 +404,12 @@ namespace Szofttech_GyakDemo01
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl2;
         private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl3;
         private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }
 
