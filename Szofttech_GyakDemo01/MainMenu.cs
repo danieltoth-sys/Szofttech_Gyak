@@ -95,8 +95,10 @@ namespace Szofttech_GyakDemo01
             }
             else if (order.DialogResult == DialogResult.No)
             {
-                fluentDesignFormContainer1.Visible = false;
-                //fluentDesignFormContainer2.Visible = true;
+                Order order1 = new Order();
+                order1.Owner = this;
+                this.Hide();
+                order1.ShowDialog();
             }
         }
         #endregion
@@ -200,6 +202,21 @@ namespace Szofttech_GyakDemo01
             this.Hide();
             ingredient.ShowDialog();
             //
+        }
+
+        private void checkedListBoxControl1_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        {
+            var mainDataFromXML = ReadXML.ReadRealXML.XMLRead("readxml.xml");
+            int endosszeg = Convert.ToInt32(labelControl2.Text);
+            if (checkedListBoxControl1.Items[checkedListBoxControl1.SelectedIndex].CheckState == CheckState.Checked)
+            {
+                endosszeg += Convert.ToInt32(mainDataFromXML.Adatok[checkedListBoxControl1.SelectedIndex].Termekek.Ar.Split(' ')[0]);
+            }
+            else
+            {
+                endosszeg -= Convert.ToInt32(mainDataFromXML.Adatok[checkedListBoxControl1.SelectedIndex].Termekek.Ar.Split(' ')[0]);
+            }
+            labelControl2.Text = (endosszeg).ToString();
         }
     }
 }
