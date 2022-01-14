@@ -57,8 +57,21 @@ namespace Szofttech_GyakDemo01
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            Owner.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Biztosan vissza lépne a főmenübe?", "Kilépés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                this.Hide();
+                Owner.Show();
+            }
         }
     }
 }

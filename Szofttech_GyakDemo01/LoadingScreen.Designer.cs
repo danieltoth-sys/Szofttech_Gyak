@@ -49,12 +49,12 @@ namespace Szofttech_GyakDemo01
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(157, 58);
+            this.labelControl1.Location = new System.Drawing.Point(113, 58);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 1);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(130, 19);
+            this.labelControl1.Size = new System.Drawing.Size(218, 19);
             this.labelControl1.TabIndex = 8;
-            this.labelControl1.Text = "CodeRiders App";
+            this.labelControl1.Text = "CodeRiders Étteremkezelő";
             // 
             // progressPanel1
             // 

@@ -158,6 +158,7 @@ namespace Szofttech_GyakDemo01
             this.Name = "Order";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Megrendelés";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Order_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();

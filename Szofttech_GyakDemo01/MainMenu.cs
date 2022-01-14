@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using Szofttech_GyakDemo01.Properties;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.LookAndFeel;
 
 namespace Szofttech_GyakDemo01
 {   
@@ -28,8 +29,15 @@ namespace Szofttech_GyakDemo01
             {
                 this.WindowState = FormWindowState.Normal;
             }
-            MessageBox.Show(mainDataFromXML.Adatok[0].Menuk.Elnevezes + " " + mainDataFromXML.Adatok[1].Menuk.Elnevezes);
 
+            if (Properties.Settings.Default.isDark)
+            {
+                barToggleSwitchItem1.Checked = true;
+            }
+            else
+            {
+                barToggleSwitchItem1.Checked = false;
+            }
             int counter = 0;
             List<string> Menus = new List<string>();
             for (int i = 0; i < mainDataFromXML.Adatok.Count; i++)
@@ -235,6 +243,29 @@ namespace Szofttech_GyakDemo01
                 endosszeg = (int)Math.Round(endosszeg / 0.7);
                 labelControl2.Text = endosszeg.ToString();
             }
+        }
+
+        private void barToggleSwitchItem1_CheckedChanged(object sender, ItemClickEventArgs e)
+        {
+            if (barToggleSwitchItem1.Checked == true)
+            {
+                this.LookAndFeel.SetSkinStyle(UserLookAndFeel.Default.SkinName, SkinSvgPalette.Bezier.MercuryIce);
+                Properties.Settings.Default.isDark = true;
+            }
+            else
+            {
+                this.LookAndFeel.SetSkinStyle(UserLookAndFeel.Default.SkinName, SkinSvgPalette.Bezier.OfficeColorful);
+                Properties.Settings.Default.isDark = false;
+            }
+        }
+
+        private void accordionControlElement9_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Önnek nincs új értesítése!", "Értesítések", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void accordionControlElement10_Click(object sender, EventArgs e)
+        {
         }
     }
 }

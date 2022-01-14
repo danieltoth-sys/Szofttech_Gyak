@@ -15,6 +15,8 @@ namespace Szofttech_GyakDemo01
         public LoadingScreen()
         {
             InitializeComponent();
+
+
         }
 
         #region Overrides

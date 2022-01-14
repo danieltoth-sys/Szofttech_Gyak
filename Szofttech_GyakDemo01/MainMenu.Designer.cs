@@ -30,10 +30,12 @@ namespace Szofttech_GyakDemo01
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Szofttech_GyakDemo01.LoadingScreen), true, true, true);
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barToggleSwitchItem1 = new DevExpress.XtraBars.BarToggleSwitchItem();
             this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -44,8 +46,8 @@ namespace Szofttech_GyakDemo01
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -53,6 +55,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -62,6 +65,10 @@ namespace Szofttech_GyakDemo01
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 1800;
             // 
             // fluentDesignFormContainer1
             // 
@@ -97,8 +104,9 @@ namespace Szofttech_GyakDemo01
             // 
             this.fluentFormDefaultManager1.Form = this;
             this.fluentFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barStaticItem1});
-            this.fluentFormDefaultManager1.MaxItemId = 4;
+            this.barStaticItem1,
+            this.barToggleSwitchItem1});
+            this.fluentFormDefaultManager1.MaxItemId = 5;
             // 
             // barStaticItem1
             // 
@@ -108,6 +116,15 @@ namespace Szofttech_GyakDemo01
             this.barStaticItem1.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.barStaticItem1.ItemAppearance.Normal.Options.UseFont = true;
             this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barToggleSwitchItem1
+            // 
+            this.barToggleSwitchItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barToggleSwitchItem1.Hint = "Sötét mód";
+            this.barToggleSwitchItem1.Id = 4;
+            this.barToggleSwitchItem1.ImageOptions.SvgImage = global::Szofttech_GyakDemo01.Properties.Resources.weather_moon;
+            this.barToggleSwitchItem1.Name = "barToggleSwitchItem1";
+            this.barToggleSwitchItem1.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.barToggleSwitchItem1_CheckedChanged);
             // 
             // checkedListBoxControl1
             // 
@@ -211,8 +228,8 @@ namespace Szofttech_GyakDemo01
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement9,
             this.accordionControlElement2,
-            this.accordionControlElement5,
             this.accordionControlElement4,
             this.accordionControlElement1});
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
@@ -224,6 +241,22 @@ namespace Szofttech_GyakDemo01
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
+            // accordionControlElement9
+            // 
+            this.accordionControlElement9.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement9.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement9.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement9.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement9.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement9.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement9.Height = 50;
+            this.accordionControlElement9.Hint = "Értesítések panel";
+            this.accordionControlElement9.ImageOptions.SvgImage = global::Szofttech_GyakDemo01.Properties.Resources.bo_notifications;
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement9.Text = "Értesítések";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
+            // 
             // accordionControlElement2
             // 
             this.accordionControlElement2.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -233,23 +266,12 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement2.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.accordionControlElement2.Appearance.Pressed.Options.UseFont = true;
             this.accordionControlElement2.Height = 75;
+            this.accordionControlElement2.Hint = "Itt veheti fel az új rendeléseket";
             this.accordionControlElement2.ImageOptions.SvgImage = global::Szofttech_GyakDemo01.Properties.Resources.employeetasklist;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement2.Text = "Rendelésfelvétel";
             this.accordionControlElement2.Click += new System.EventHandler(this.accordionControlElement2_Click);
-            // 
-            // accordionControlElement5
-            // 
-            this.accordionControlElement5.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.accordionControlElement5.Appearance.Hovered.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
-            this.accordionControlElement5.Height = 50;
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "Készlet";
             // 
             // accordionControlElement4
             // 
@@ -265,8 +287,9 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement8});
             this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.Height = 50;
+            this.accordionControlElement4.Hint = "Ebben a panelben kezelheti a készletet";
             this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Text = "Új hozzáadása";
+            this.accordionControlElement4.Text = "Készlet";
             // 
             // accordionControlElement6
             // 
@@ -279,7 +302,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement6.Height = 35;
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement6.Text = "Termék";
+            this.accordionControlElement6.Text = "Termékek";
             this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
             // 
             // accordionControlElement7
@@ -293,7 +316,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement7.Height = 35;
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement7.Text = "Menü";
+            this.accordionControlElement7.Text = "Menük";
             this.accordionControlElement7.Click += new System.EventHandler(this.accordionControlElement7_Click);
             // 
             // accordionControlElement8
@@ -307,7 +330,7 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement8.Height = 35;
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement8.Text = "Alapanyag";
+            this.accordionControlElement8.Text = "Alapanyagok";
             this.accordionControlElement8.Click += new System.EventHandler(this.accordionControlElement8_Click);
             // 
             // accordionControlElement1
@@ -331,7 +354,8 @@ namespace Szofttech_GyakDemo01
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barStaticItem1});
+            this.barStaticItem1,
+            this.barToggleSwitchItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -340,6 +364,7 @@ namespace Szofttech_GyakDemo01
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barStaticItem1);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barToggleSwitchItem1);
             // 
             // accordionControlElement3
             // 
@@ -356,6 +381,22 @@ namespace Szofttech_GyakDemo01
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement3.Text = "Kilépés";
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Appearance.Hovered.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement5.Appearance.Hovered.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement5.Appearance.Normal.Options.UseFont = true;
+            this.accordionControlElement5.Appearance.Pressed.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.accordionControlElement5.Appearance.Pressed.Options.UseFont = true;
+            this.accordionControlElement5.ControlFooterAlignment = DevExpress.XtraBars.Navigation.AccordionItemFooterAlignment.Far;
+            this.accordionControlElement5.Height = 75;
+            this.accordionControlElement5.Hint = "Kilépés a programból";
+            this.accordionControlElement5.ImageOptions.SvgImage = global::Szofttech_GyakDemo01.Properties.Resources.actions_deletecircled;
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement5.Text = "Kilépés";
             // 
             // MainMenu
             // 
@@ -394,7 +435,6 @@ namespace Szofttech_GyakDemo01
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement6;
@@ -411,6 +451,9 @@ namespace Szofttech_GyakDemo01
         private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl3;
         private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
         private DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraBars.BarToggleSwitchItem barToggleSwitchItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
     }
 }
 

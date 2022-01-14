@@ -58,6 +58,7 @@ namespace Szofttech_GyakDemo01
                     return;
                 }
                 MessageBox.Show("A rendelést sikeresen leadta!", "Rendelés", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
 
@@ -163,6 +164,13 @@ namespace Szofttech_GyakDemo01
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             groupControl1.Visible = false;
+        }
+
+        private void RegisteredOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            Owner.Close();
         }
     }
 }

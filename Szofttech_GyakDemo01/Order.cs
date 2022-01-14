@@ -38,5 +38,12 @@ namespace Szofttech_GyakDemo01
                 return;
             }
         }
+
+        private void Order_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
+            Owner.Show();            
+        }
     }
 }

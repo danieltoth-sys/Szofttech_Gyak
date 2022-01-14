@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Szofttech_GyakDemo01.Properties;
+using DevExpress.LookAndFeel;
 
 namespace Szofttech_GyakDemo01
 {
@@ -24,6 +26,16 @@ namespace Szofttech_GyakDemo01
             password = "123";
             //
             InitializeComponent();
+
+            if (Properties.Settings.Default.isDark == true)
+            {
+                this.LookAndFeel.SetSkinStyle(UserLookAndFeel.Default.SkinName, SkinSvgPalette.Bezier.MercuryIce);
+            }
+            else
+            {
+                this.LookAndFeel.SetSkinStyle(UserLookAndFeel.Default.SkinName, SkinSvgPalette.Bezier.OfficeColorful);
+            }
+
             textEdit2.Properties.PasswordChar = '*';
         }
         #endregion
@@ -42,6 +54,7 @@ namespace Szofttech_GyakDemo01
                 MessageBox.Show("Hibás felhasználónév, vagy jelszó!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            MessageBox.Show("Sikeres bejelentkezés!", "Belépés", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MainMenu main = new MainMenu();
             main.Owner = this;
             this.Hide();
